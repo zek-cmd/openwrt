@@ -89,3 +89,4 @@ jobs:
                 generateReleaseNotes: true
                 makeLatest: true
                 artifacts: bin/targets/ipq807x/generic/*
+                token: "${{ secrets.GITHUB_TOKEN }}"
