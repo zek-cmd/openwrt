@@ -56,6 +56,7 @@ CONFIG_TARGET_MULTI_PROFILE=y
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_edgecore_eap102 is not set
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_edimax_cax1800 is not set
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_netgear_rax120v2 is not set
+# CONFIG_TARGET_qualcommax_ipq807x_DEVICE_netgear_wax620 is not set
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_netgear_wax218 is not set
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_prpl_haze is not set
 # CONFIG_TARGET_qualcommax_ipq807x_DEVICE_qnap_301w is not set
@@ -83,6 +84,8 @@ CONFIG_TARGET_DEVICE_qualcommax_ipq807x_DEVICE_netgear_rax120v2=y
 CONFIG_TARGET_DEVICE_PACKAGES_qualcommax_ipq807x_DEVICE_netgear_rax120v2=""
 CONFIG_TARGET_DEVICE_qualcommax_ipq807x_DEVICE_netgear_wax218=y
 CONFIG_TARGET_DEVICE_PACKAGES_qualcommax_ipq807x_DEVICE_netgear_wax218=""
+CONFIG_TARGET_DEVICE_qualcommax_ipq807x_DEVICE_netgear_wax620=y
+CONFIG_TARGET_DEVICE_PACKAGES_qualcommax_ipq807x_DEVICE_netgear_wax620=""
 CONFIG_TARGET_DEVICE_qualcommax_ipq807x_DEVICE_prpl_haze=y
 CONFIG_TARGET_DEVICE_PACKAGES_qualcommax_ipq807x_DEVICE_prpl_haze=""
 CONFIG_TARGET_DEVICE_qualcommax_ipq807x_DEVICE_qnap_301w=y
@@ -133,6 +136,7 @@ CONFIG_MODULE_DEFAULT_ipq-wifi-edgecore_eap102=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-edimax_cax1800=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-netgear_rax120v2=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-netgear_wax218=y
+CONFIG_MODULE_DEFAULT_ipq-wifi-netgear_wax620=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-prpl_haze=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-qnap_301w=y
 CONFIG_MODULE_DEFAULT_ipq-wifi-redmi_ax6=y
@@ -1924,6 +1928,7 @@ CONFIG_PACKAGE_ipq-wifi-edgecore_eap102=m
 CONFIG_PACKAGE_ipq-wifi-edimax_cax1800=m
 CONFIG_PACKAGE_ipq-wifi-netgear_rax120v2=m
 CONFIG_PACKAGE_ipq-wifi-netgear_wax218=m
+CONFIG_PACKAGE_ipq-wifi-netgear_wax620=m
 CONFIG_PACKAGE_ipq-wifi-prpl_haze=m
 CONFIG_PACKAGE_ipq-wifi-qnap_301w=m
 CONFIG_PACKAGE_ipq-wifi-redmi_ax6=m
@@ -3271,6 +3276,8 @@ CONFIG_LUA_ECO_MBEDTLS=y
 # CONFIG_PACKAGE_luaexpat is not set
 # CONFIG_PACKAGE_luafilesystem is not set
 # CONFIG_PACKAGE_luajit is not set
+CONFIG_HAS_LUAJIT_ARCH=y
+# CONFIG_PACKAGE_luajit2 is not set
 # CONFIG_PACKAGE_lualanes is not set
 # CONFIG_PACKAGE_luaossl is not set
 # CONFIG_PACKAGE_luaposix is not set
@@ -3403,7 +3410,6 @@ CONFIG_LUA_ECO_MBEDTLS=y
 # CONFIG_PACKAGE_python3-et_xmlfile is not set
 # CONFIG_PACKAGE_python3-evdev is not set
 # CONFIG_PACKAGE_python3-eventlet is not set
-# CONFIG_PACKAGE_python3-exceptiongroup is not set
 # CONFIG_PACKAGE_python3-execnet is not set
 # CONFIG_PACKAGE_python3-flask is not set
 # CONFIG_PACKAGE_python3-flask-babel is not set
@@ -3573,7 +3579,6 @@ CONFIG_LUA_ECO_MBEDTLS=y
 # Rust
 #
 # CONFIG_PACKAGE_maturin is not set
-# CONFIG_PACKAGE_rust is not set
 # end of Rust
 
 #
@@ -6102,6 +6107,8 @@ CONFIG_PACKAGE_cgi-io=y
 # CONFIG_PACKAGE_nginx-mod-geoip2 is not set
 # CONFIG_PACKAGE_nginx-mod-headers-more is not set
 # CONFIG_PACKAGE_nginx-mod-lua is not set
+# CONFIG_PACKAGE_nginx-mod-lua-resty-core is not set
+# CONFIG_PACKAGE_nginx-mod-lua-resty-lrucache is not set
 # CONFIG_PACKAGE_nginx-mod-luci is not set
 # CONFIG_PACKAGE_nginx-mod-naxsi is not set
 # CONFIG_PACKAGE_nginx-mod-rtmp is not set
