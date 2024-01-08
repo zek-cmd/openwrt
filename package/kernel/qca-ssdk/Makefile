@@ -5,9 +5,9 @@ PKG_RELEASE:=6
 
 PKG_SOURCE_URL:=https://git.codelinaro.org/clo/qsdk/oss/lklm/qca-ssdk.git
 PKG_SOURCE_PROTO:=git
-PKG_SOURCE_DATE:=2023-10-04
-PKG_SOURCE_VERSION:=23a5aa4a4d5834da7a07efb58baebfbee91786b0
-PKG_MIRROR_HASH:=2310cdad1ebc424c534aa3a2c71e72e0ab3635295653a88d17dfc64c402cd151
+PKG_SOURCE_DATE:=2023-11-30
+PKG_SOURCE_VERSION:=3153d9068a87198dabf1b8f2c80801fd31a493b3
+PKG_MIRROR_HASH:=05595ba16b22873f5b52609a0ba316ee5264d7fe4ed5b2fb9198da7fe43e4a08
 
 PKG_FLAGS:=nonshared
 PKG_BUILD_PARALLEL:=1
@@ -57,6 +57,10 @@ endif
 ifeq ($(CONFIG_TARGET_SUBTARGET), "ipq60xx")
     MAKE_FLAGS+= CHIP_TYPE=CPPE
 endif
+
+define Build/Compile
+	+$(MAKE) $(MAKE_FLAGS) -C $(PKG_BUILD_DIR) $(LNX_CONFIG_OPTS)
+endef
 
 define Build/InstallDev
 	$(INSTALL_DIR) $(1)/usr/include/qca-ssdk
