@@ -1,4 +1,4 @@
-name: Build IPQ807x NSS
+name: Build IPQ807x NSS WiFi
 
 on: workflow_dispatch
 
@@ -56,9 +56,9 @@ jobs:
             - name: Create a release
               uses: "ncipollo/release-action@v1"
               with:
-                name: "Updated prebuilt images ${{ env.NOW }}"
-                commit: "main"
-                tag: "ipq807x-${{ env.NOW }}"
+                name: "Updated prebuilt images (NSS-WIFI) ${{ env.NOW }}"
+                commit: "main_nss"
+                tag: "ipq807x-nsswifi-${{ env.NOW }}"
                 generateReleaseNotes: true
                 makeLatest: true
                 artifacts: bin/targets/qualcommax/ipq807x/*
