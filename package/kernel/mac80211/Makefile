@@ -11,7 +11,7 @@ include $(INCLUDE_DIR)/kernel.mk
 PKG_NAME:=mac80211
 
 PKG_VERSION:=6.6.15
-PKG_RELEASE:=10
+PKG_RELEASE:=11
 PKG_LICENSE:=GPL-2.0-only
 PKG_LICENSE_FILES:=COPYING
 
@@ -309,8 +309,6 @@ ifdef CONFIG_ATH11K_NSS_SUPPORT
 	IREMAP_CFLAGS+=-I$(STAGING_DIR)/usr/include/qca-nss-drv -I$(STAGING_DIR)/usr/include/qca-nss-clients
 endif
 
-NSS_PATCHES:= subsys ath10k ath11k
-
 config-$(CONFIG_PACKAGE_MAC80211_NSS_SUPPORT) += MAC80211_NSS_SUPPORT
 
 MAKE_OPTS:= \
@@ -436,7 +434,7 @@ endef
 ifdef CONFIG_ATH11K_NSS_SUPPORT
 define KernelPackage/ath11k/install
 	$(INSTALL_DIR) $(1)/etc/init.d $(1)/etc/config
-	$(INSTALL_BIN) ./files/etc/init.d/qca-nss-pbuf $(1)/etc/init.d
+	$(INSTALL_BIN) ./files/qca-nss-pbuf.init $(1)/etc/init.d/qca-nss-pbuf
 	$(INSTALL_BIN) ./files/pbuf.uci $(1)/etc/config/pbuf
 endef
 endif
